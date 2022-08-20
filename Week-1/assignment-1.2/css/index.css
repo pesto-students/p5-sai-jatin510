@@ -30,9 +30,9 @@ header div {
   flex-direction: row;
 }
 .tools span {
-  padding: 7px;
+  padding: 8px;
 }
-
+/* mulitple of 4s */
 section {
   width: 100%;
 }
