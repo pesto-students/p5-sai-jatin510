@@ -29,41 +29,40 @@
   height: 200px;
   width: 200px;
   transition: transform 1s linear;
-  transform-style: preserve;
 }
 
 #top-left {
   background-color: red;
+  transform-origin: top left;
 }
 
 #top-right {
+  transform-origin: top right;
   background-color: yellow;
 }
 
 #bottom-left {
+  transform-origin: bottom left;
   background-color: blue;
 }
 
 #bottom-right {
+  transform-origin: bottom right;
   background-color: green;
 }
 
 #boxes:hover #top-left {
-  transform-origin: top left;
   transform: rotate(90deg);
 }
 
 #boxes:hover #top-right {
-  transform-origin: top right;
   transform: rotate(-90deg);
 }
 
 #boxes:hover #bottom-left {
-  transform-origin: bottom left;
   transform: rotate(-90deg);
 }
 
 #boxes:hover #bottom-right {
-  transform-origin: bottom right;
   transform: rotate(90deg);
 }
