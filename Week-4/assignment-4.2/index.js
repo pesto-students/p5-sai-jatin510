@@ -11,7 +11,7 @@ Person.prototype.describe = function () {
 
 const Teacher = function () {};
 
-Teacher.prototype = new Person();
+Object.setPrototypeOf(Teacher.prototype, Person.prototype);
 
 Teacher.prototype.teach = function (subject) {
   console.log(`${this.name} is now teaching ${subject}.`);
