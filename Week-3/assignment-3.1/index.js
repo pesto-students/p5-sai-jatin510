@@ -1,5 +1,8 @@
 function add(...args) {
-  return args.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
+  return args.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
 }
 
 function memoize(func) {
@@ -12,9 +15,9 @@ function memoize(func) {
       return map.get(key);
     }
 
-    const sum = func(...args);
-    map.set(key, sum);
-    return sum;
+    const value = func(...args);
+    map.set(key, value);
+    return value;
   };
 }
 
