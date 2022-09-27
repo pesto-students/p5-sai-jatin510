@@ -1,3 +1,4 @@
+// find the sum of maximum sum of contiguous subarray;
 const arr = [-1, 2, 3, -53, 32, 22, 11, -12];
 
 function bruteForce(arr) {

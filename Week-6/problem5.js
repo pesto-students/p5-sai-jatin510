@@ -1,3 +1,5 @@
+// find the pair, with the given difference
+
 const arr = [5, 10, 3, 2, 50, 80];
 const diff = 78;
 
