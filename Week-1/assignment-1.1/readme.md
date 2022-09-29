@@ -93,3 +93,44 @@ When the renderer is created and added to the tree, it does not have a position 
 Layouts are processed, left-to-right and top-to-bottom through the document. Layout is a recursive process. It begins at the root renderer, which corresponds to the `<HTML>` element of the HTML document.
 
 In the painting stage, the render tree is traversed and the renderer's "paint()" method is called to display content on the screen. Painting uses the UI infrastructure component.
+
+---
+
+### What is Critical rendering path (CRP)?
+
+The Critical Rendering Path is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen. Optimizing the critical render path improves render performance.
+It includes the Document Object Model (DOM), CSS Object Model (CSSOM), render tree and layout.
+
+### How to improve CRP performance?
+
+- Analyze and characterize your critical path: number of resources, bytes, length.
+- Minimize number of critical resources: eliminate them, defer their download, mark them as async, and so on.
+- Optimize the number of critical bytes to reduce the download time (number of roundtrips).
+- Optimize the order in which the remaining critical resources are loaded: download all critical assets as early as possible to shorten the critical path length.
+
+### Why is CSS called render blocking resource?
+
+The browser first renders the CSSOM then proceeds further.
+The CSSOM can only be constructed after receiving the necessary CSS rules from all the cascaded stylesheets
+This process blocks the rendering until browser gets all the required CSS hence CSS is called as render blocking resource.
+
+### What is difference between a DOM Tree and a Render Tree?
+
+The DOM tree is essentially the tree containing all of your HTML elements (nodes), whereas the render tree is a culmination of the DOM and CSSOM trees. The render tree is the one that is actually rendered onto the page.
+The render tree may not contain all the nodes that a DOM tree contains; so, render tree can be considered as a subset of DOM tree.
+
+### Why is JS called Parser blocking resource?
+
+When a HTML parser finds a `<script>` while parsing a document, it has to stop parsing and fetch/ execute the JS first, where the JS might contain document.write() method calls that fundamentally changes how the subsequent markup is to be parsed by causing the DOM tree to re-render.
+
+JavaScript blocks DOM construction unless explicitly declared as async.
+
+The JS script can ask for some resources over the internet. and it will have to wait to fetch and parse.
+
+It's the sequential process which is parser blocking, hence JS is called Parser Blocking resource.
+
+### What is reflow and repaint?
+
+After the initial layout and paint, the information which was used to construct render tree may change and eventually some parts of the render tree may need to be revalidated and the node dimensions recalculated. This is called a reflow/ layout/ layouting. This is always at least one reflow happens for initial layout of the page.
+
+The updates in a render tree may cause updates in some parts of the screen, either because of the geometric position change or any other style change (e.g. font-color, visibility, background etc); this process of updating the screen is called as repaint. It affects the visibility of an element but do not affects layout.
