@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: black;
+  color: white;
+}
+
+header div {
+  padding: 20px;
+}
+
+.chartInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tools {
+  display: flex;
+  flex-direction: row;
+}
+.tools span {
+  padding: 8px;
+}
+/* mulitple of 4s */
+section {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0px 10px;
+}
+
+ul li:nth-child(2n) {
+  background-color: lightgray;
+}
+
+ul li div {
+  width: 25%;
+  padding: 10px;
+}
+
+li div:nth-child(4) {
+  color: blue;
+  text-transform: uppercase;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(9, 54, 150);
+  color: white;
+  width: 100%;
+}
+
+footer div {
+  padding: 15px 25px;
+}
+
+footer div img {
+  width: 50%;
+}
+
+.media-controls {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.media-controls span {
+  width: 25%;
+  padding-left: 20px;
+}
+
+footer div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer div:nth-child(2) p {
+  padding: 10px 0px;
+}
