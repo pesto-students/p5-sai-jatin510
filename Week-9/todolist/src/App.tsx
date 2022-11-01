@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 import './App.css';
+import DeleteTodo from './components/DeleteTodo';
 import Header from './components/Header';
 import TodoForm from './components/TodoForm';
 import Todos from './components/Todos';
@@ -20,14 +22,22 @@ function App() {
   const addTodo = (userInput: any) => {
     setTodoList([
       ...todoList,
-      { id: todoList.length + 1, task: userInput, complete: false },
+      { id: uuidv4(), task: userInput, complete: false },
     ]);
+  };
+
+  const deleteCompletedTask = () => {
+    const nonCompletedTasks = todoList.filter(
+      (todo: any) => todo.complete === false
+    );
+    setTodoList(nonCompletedTasks);
   };
 
   return (
     <div className="App">
       <Header />
       <Todos todoList={todoList} handleToggle={handleToggle} />
+      <DeleteTodo deleteCompletedTask={deleteCompletedTask} />
       <TodoForm addTodo={addTodo} />
     </div>
   );
