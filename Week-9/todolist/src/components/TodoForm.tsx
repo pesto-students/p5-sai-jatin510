@@ -8,7 +8,6 @@ const TodoForm = (props: any) => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     addTodo(userInput);
-    console.log(userInput);
     setUserInput('');
   };
 
