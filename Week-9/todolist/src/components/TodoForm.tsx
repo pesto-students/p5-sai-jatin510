@@ -17,7 +17,7 @@ const TodoForm = (props: any) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="TodoForm" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter task"

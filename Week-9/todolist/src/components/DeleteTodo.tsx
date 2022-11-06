@@ -6,7 +6,9 @@ const DeleteTodo = (props: any) => {
   }
   return (
     <>
-      <button onClick={deleteTask}>Delete Completed Task</button>
+      <button className="DeleteButton" onClick={deleteTask}>
+        Delete Completed Task
+      </button>
     </>
   );
 };
