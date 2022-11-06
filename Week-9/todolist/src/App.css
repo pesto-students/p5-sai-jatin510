@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  font-size: 24px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.DeleteButton {
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(34, 158, 40);
+  width: 15%;
+
+  position: fixed;
+  bottom: 100px;
+  transform: translate(-50%, -50%);
+  /* width: 100%; */
+}
+
+.TodoForm {
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 40px;
+  width: 100%;
+}
+
+.TodoForm input {
+  padding: 15px;
+  width: 60%;
+}
+
+.TodoForm button {
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(54, 163, 191);
+  width: 15%;
+}
