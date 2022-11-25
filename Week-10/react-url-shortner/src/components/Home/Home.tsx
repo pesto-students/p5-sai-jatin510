@@ -47,9 +47,13 @@ export default function Home() {
       <h2>Home</h2>
 
       <form>
-        <label htmlFor="">
+        <label htmlFor="linkInput">
           Input link
-          <input placeholder="Shorten a link here" ref={inputRef} />
+          <input
+            placeholder="Shorten a link here"
+            ref={inputRef}
+            id="linkInput"
+          />
         </label>
 
         <button onClick={handleButtonClick}>Shorten !!</button>
