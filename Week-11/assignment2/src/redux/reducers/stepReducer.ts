@@ -8,7 +8,7 @@ const initialState: IStepsState = {
   steps: 0,
 };
 
-const StepsReducer = (state = initialState, action) => {
+const stepsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_STEP:
       return {
@@ -26,4 +26,4 @@ const StepsReducer = (state = initialState, action) => {
   }
 };
 
-export default StepsReducer;
+export default stepsReducer;
