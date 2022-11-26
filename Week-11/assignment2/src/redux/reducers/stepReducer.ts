@@ -5,7 +5,7 @@ export interface IStepsState {
 }
 
 const initialState: IStepsState = {
-  steps: 0,
+  steps: 10,
 };
 
 const stepsReducer = (state = initialState, action) => {

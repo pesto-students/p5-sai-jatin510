@@ -2,11 +2,15 @@ import './App.css';
 import AddStep from './components/AddStep';
 import ShowStep from './components/ShowStep';
 import ResetStep from './components/ResetStep';
+import { useSelector } from 'react-redux';
+import { IStepsState } from './redux/reducers/stepReducer';
 
 function App() {
+  const steps = useSelector<IStepsState>((state) => state.steps);
+
   return (
     <div className="App">
-      <ShowStep />
+      <ShowStep steps={steps} />
       <AddStep />
       <ResetStep />
     </div>

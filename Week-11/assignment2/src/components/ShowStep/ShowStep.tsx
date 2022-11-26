@@ -1,10 +1,8 @@
-import React from 'react';
-
-export default function ShowStep() {
-  const stepsCount = 1;
+export default function ShowStep(props) {
+  const { steps } = props;
   return (
     <div>
-      <h2>You have walked {stepsCount} steps today !</h2>
+      <h2>You have walked {steps} steps today !</h2>
     </div>
   );
 }
