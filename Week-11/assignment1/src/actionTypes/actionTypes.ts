@@ -1,0 +1,1 @@
+export const ROOM_TOGGLE_LIGHT = 'ROOM_TOGGLE_LIGHT';
