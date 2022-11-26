@@ -1,12 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { resetStep } from '../../redux/actions/stepsAction';
 
 export default function ResetStep() {
-  const handleButtonClick = () => {
-    console.log('handleButtonClick');
+  const dispatch = useDispatch();
+
+  const handleResetButtonClick = () => {
+    dispatch(resetStep());
   };
+
   return (
     <div>
-      <button onClick={handleButtonClick}>Reset Step</button>
+      <button onClick={handleResetButtonClick}>Reset Step</button>
     </div>
   );
 }
